@@ -12,5 +12,5 @@ jobs:
       with:
         python-version: '3.9'
     - name: run go
-      run: go version
+      run: ls
       
