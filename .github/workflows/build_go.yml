@@ -14,6 +14,7 @@ jobs:
     - name: run go
       run: |
         cd source/hello/
-        go run main.go
+        build .
+        ./hello
       
       
