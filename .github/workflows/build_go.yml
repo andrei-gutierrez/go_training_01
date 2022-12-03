@@ -1,0 +1,16 @@
+name: build_go
+
+on:
+  push
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-go@v3
+      with:
+        python-version: '3.9'
+    - name: run go
+      run: go version
+      
