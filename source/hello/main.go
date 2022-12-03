@@ -6,5 +6,5 @@ import (
 )
 
 func main() { //small caps if private
-  fmt.Println("Hellow from Go!")
+  fmt.Println("Hello from Go!")
 }
