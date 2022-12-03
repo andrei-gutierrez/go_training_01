@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'source/**'
+      - '.github/workflows/build_go.yml'
 
 jobs:
   linux:
