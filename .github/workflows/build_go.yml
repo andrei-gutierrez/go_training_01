@@ -14,7 +14,7 @@ jobs:
     - name: run go
       run: |
         cd source/hello/
-        build .
+        go build .
         ./hello
       
       
