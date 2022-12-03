@@ -13,8 +13,7 @@ jobs:
         python-version: '3.9'
     - name: run go
       run: |
-        cd source/hello/
-        go build .
-        ./hello
+        go build source/hello/main.go
+        source/hello/hello
       
       
