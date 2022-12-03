@@ -12,17 +12,22 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-go@v3
-      with:
-        python-version: '3.9'
-    - name: Build go
+    - name: Build go for linux
       run: go build source/hello/main.go
+    - name: Build go for windows
+      run: GOOS=windows GOARCH=amd64 go build source/hello/main.go
     - name: Run go
       run: ./main
-    - name: Upload artifact
+    - name: Upload Linux artifact
       uses: actions/upload-artifact@v3.1.1
       with:
         name: linux
         path: ./main
+    - name: Upload Windows artifact
+      uses: actions/upload-artifact@v3.1.1
+      with:
+        name: windows
+        path: ./main.exe
     
       
       
