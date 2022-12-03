@@ -1,7 +1,9 @@
 name: build_go
 
 on:
-  push
+  push:
+    paths:
+      - 'source/**'
 
 jobs:
   linux:
@@ -11,9 +13,9 @@ jobs:
     - uses: actions/setup-go@v3
       with:
         python-version: '3.9'
+    - name: build go
+      run: go build source/hello/main.go
     - name: run go
-      run: |
-        go build source/hello/main.go
-        ./main
+      run: ./main
       
       
